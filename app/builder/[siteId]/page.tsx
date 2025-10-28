@@ -1,23 +1,27 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Sidebar } from "@/components/builder/sidebar"
-import { EditorPanel } from "@/components/builder/editor-panel"
-import { PreviewPanel } from "@/components/builder/preview-panel"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Sidebar } from "@/components/builder/sidebar";
+import { EditorPanel } from "@/components/builder/editor-panel";
+import { PreviewPanel } from "@/components/builder/preview-panel";
 
-export default function BuilderPage({ params }: { params: { siteId: string } }) {
-  const [selectedSection, setSelectedSection] = useState<string>("hero")
-  const [isSaving, setIsSaving] = useState(false)
-  const [showPreview, setShowPreview] = useState(false)
+export default function BuilderPage({
+  params,
+}: {
+  params: { siteId: string };
+}) {
+  const [selectedSection, setSelectedSection] = useState<string>("hero");
+  const [isSaving, setIsSaving] = useState(false);
+  const [showPreview, setShowPreview] = useState(false);
 
   const handleSave = async () => {
-    setIsSaving(true)
+    setIsSaving(true);
     // Simulate API call
     setTimeout(() => {
-      setIsSaving(false)
-    }, 1000)
-  }
+      setIsSaving(false);
+    }, 1000);
+  };
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -25,7 +29,7 @@ export default function BuilderPage({ params }: { params: { siteId: string } }) 
       <header className="border-b border-border bg-surface sticky top-0 z-40">
         <div className="px-6 py-4 flex justify-between items-center">
           <div>
-            <h1 className="text-2xl font-bold text-gradient">RealEstate.AI</h1>
+            <h1 className="text-2xl font-bold text-gradient">Real Estate</h1>
             <p className="text-sm text-muted">My Luxury Villa Listing</p>
           </div>
           <div className="flex gap-3">
@@ -50,7 +54,10 @@ export default function BuilderPage({ params }: { params: { siteId: string } }) 
       {/* Main Editor */}
       <div className="flex-1 flex overflow-hidden">
         {/* Left Sidebar - Page Structure */}
-        <Sidebar selectedSection={selectedSection} onSelectSection={setSelectedSection} />
+        <Sidebar
+          selectedSection={selectedSection}
+          onSelectSection={setSelectedSection}
+        />
 
         {/* Center - Editor Panel */}
         {!showPreview && <EditorPanel selectedSection={selectedSection} />}
@@ -59,5 +66,5 @@ export default function BuilderPage({ params }: { params: { siteId: string } }) 
         {showPreview && <PreviewPanel />}
       </div>
     </div>
-  )
+  );
 }

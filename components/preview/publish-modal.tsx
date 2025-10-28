@@ -1,27 +1,27 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 
 interface PublishModalProps {
-  onClose: () => void
-  onPublish: () => void
+  onClose: () => void;
+  onPublish: () => void;
 }
 
 export function PublishModal({ onClose, onPublish }: PublishModalProps) {
-  const [domain, setDomain] = useState("luxuryvilla")
-  const [isPublishing, setIsPublishing] = useState(false)
+  const [domain, setDomain] = useState("luxuryvilla");
+  const [isPublishing, setIsPublishing] = useState(false);
 
   const handlePublish = async () => {
-    setIsPublishing(true)
+    setIsPublishing(true);
     // Simulate API call
     setTimeout(() => {
-      setIsPublishing(false)
-      onPublish()
-    }, 1500)
-  }
+      setIsPublishing(false);
+      onPublish();
+    }, 1500);
+  };
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
@@ -30,16 +30,22 @@ export function PublishModal({ onClose, onPublish }: PublishModalProps) {
 
         <div className="space-y-6">
           <div>
-            <label className="block text-sm font-medium mb-2">Custom Domain (Optional)</label>
+            <label className="block text-sm font-medium mb-2">
+              Custom Domain (Optional)
+            </label>
             <div className="flex gap-2">
               <Input
                 value={domain}
                 onChange={(e) => setDomain(e.target.value)}
                 className="flex-1 bg-input border-border text-foreground"
               />
-              <span className="flex items-center text-muted">.realestate.ai</span>
+              <span className="flex items-center text-muted">
+                .RealEstate.devscot
+              </span>
             </div>
-            <p className="text-xs text-muted mt-2">Your website will be available at: {domain}.realestate.ai</p>
+            <p className="text-xs text-muted mt-2">
+              Your website will be available at: {domain}.RealEstate.devscot
+            </p>
           </div>
 
           <div className="bg-input rounded-lg p-4">
@@ -52,7 +58,8 @@ export function PublishModal({ onClose, onPublish }: PublishModalProps) {
                 <span className="text-primary">✓</span> Images are uploaded
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-primary">✓</span> Contact form is configured
+                <span className="text-primary">✓</span> Contact form is
+                configured
               </li>
             </ul>
           </div>
@@ -76,5 +83,5 @@ export function PublishModal({ onClose, onPublish }: PublishModalProps) {
         </div>
       </Card>
     </div>
-  )
+  );
 }
