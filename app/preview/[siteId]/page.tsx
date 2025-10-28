@@ -1,16 +1,19 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { PublishModal } from "@/components/preview/publish-modal";
 import { ShareModal } from "@/components/preview/share-modal";
+import Link from "next/link";
 
 export default function PreviewPage({
   params,
 }: {
   params: { siteId: string };
 }) {
+  const router = useRouter();
   const [showPublishModal, setShowPublishModal] = useState(false);
   const [showShareModal, setShowShareModal] = useState(false);
   const [isPublished, setIsPublished] = useState(false);
@@ -185,23 +188,27 @@ export default function PreviewPage({
             <p className="text-primary font-semibold mb-4">
               {isPublished ? "Published" : "Draft"}
             </p>
-            <Button
-              variant="outline"
-              className="w-full border-border hover:bg-surface bg-transparent text-sm"
-            >
-              View Analytics
-            </Button>
+            <Link href="/admin">
+              <Button
+                variant="outline"
+                className="w-full border-border hover:bg-surface bg-transparent text-sm"
+              >
+                View Analytics
+              </Button>
+            </Link>
           </Card>
 
           <Card className="bg-surface border-border p-6">
             <h3 className="font-semibold mb-2">Performance</h3>
             <p className="text-muted text-sm mb-4">SEO Score: 92/100</p>
-            <Button
-              variant="outline"
-              className="w-full border-border hover:bg-surface bg-transparent text-sm"
-            >
-              View Report
-            </Button>
+            <Link href="/admin">
+              <Button
+                variant="outline"
+                className="w-full border-border hover:bg-surface bg-transparent text-sm"
+              >
+                View Report
+              </Button>
+            </Link>
           </Card>
         </div>
       </main>
@@ -213,6 +220,7 @@ export default function PreviewPage({
           onPublish={() => {
             setIsPublished(true);
             setShowPublishModal(false);
+            router.push("/dashboard");
           }}
         />
       )}
