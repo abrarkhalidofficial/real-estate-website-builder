@@ -2,6 +2,8 @@
 
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import { Checkbox } from "@/components/ui/checkbox"
+import { HomeIcon, LayoutGridIcon, FileTextIcon, UsersIcon, PhoneIcon, NewspaperIcon } from "lucide-react"
 
 interface PageSelectorProps {
   selected: string[]
@@ -11,12 +13,12 @@ interface PageSelectorProps {
 }
 
 const availablePages = [
-  { id: "home", name: "Home", description: "Hero banner and featured listings" },
-  { id: "listings", name: "Listings", description: "Property grid with filters" },
-  { id: "detail", name: "Property Detail", description: "Individual property showcase" },
-  { id: "about", name: "About", description: "Your story and team information" },
-  { id: "contact", name: "Contact", description: "Contact form and location map" },
-  { id: "blog", name: "Blog", description: "Articles and market insights" },
+  { id: "home", name: "Home", description: "Hero banner and featured listings", icon: HomeIcon },
+  { id: "listings", name: "Listings", description: "Property grid with filters", icon: LayoutGridIcon },
+  { id: "detail", name: "Property Detail", description: "Individual property showcase", icon: FileTextIcon },
+  { id: "about", name: "About", description: "Your story and team information", icon: UsersIcon },
+  { id: "contact", name: "Contact", description: "Contact form and location map", icon: PhoneIcon },
+  { id: "blog", name: "Blog", description: "Articles and market insights", icon: NewspaperIcon },
 ]
 
 export function PageSelector({ selected, onSelect, onNext, onBack }: PageSelectorProps) {
@@ -36,19 +38,20 @@ export function PageSelector({ selected, onSelect, onNext, onBack }: PageSelecto
           <Card
             key={page.id}
             onClick={() => togglePage(page.id)}
-            className={`p-4 cursor-pointer transition-all border-2 flex items-center ${
+            className={`p-4 cursor-pointer transition-all border-2 flex items-center gap-4 ${
               selected.includes(page.id) ? "border-primary bg-primary/10" : "border-border hover:border-primary/50"
             }`}
           >
-            <input
-              type="checkbox"
+            <Checkbox
               checked={selected.includes(page.id)}
-              onChange={() => {}}
-              className="w-5 h-5 rounded border-border cursor-pointer"
+              onCheckedChange={() => togglePage(page.id)}
+              aria-label={`Select ${page.name}`}
+              className="size-5"
             />
-            <div className="ml-4 flex-1">
+            <div className="flex items-center gap-3 flex-1">
+              <page.icon className="size-5 text-muted-foreground" aria-hidden="true" />
               <h3 className="font-semibold">{page.name}</h3>
-              <p className="text-sm text-muted">{page.description}</p>
+              <p className="text-sm text-muted-foreground">{page.description}</p>
             </div>
           </Card>
         ))}

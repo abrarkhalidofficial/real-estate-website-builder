@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
+import { ImageIcon, FileTextIcon, UploadCloudIcon } from "lucide-react"
 
 interface ContentUploadProps {
   onNext: () => void
@@ -19,7 +20,7 @@ export function ContentUpload({ onNext, onBack }: ContentUploadProps) {
           <Input
             type="text"
             placeholder="Your Real Estate Business"
-            className="bg-input border-border text-foreground placeholder:text-muted"
+            className="bg-input border-border text-foreground placeholder:text-muted-foreground"
           />
         </div>
 
@@ -35,27 +36,32 @@ export function ContentUpload({ onNext, onBack }: ContentUploadProps) {
         <div>
           <label className="block text-sm font-medium mb-2">Logo or Images</label>
           <Card className="border-2 border-dashed border-border p-8 text-center cursor-pointer hover:border-primary transition">
-            <div className="text-4xl mb-2">📸</div>
-            <p className="text-muted mb-2">Drag and drop your images here</p>
-            <p className="text-xs text-muted">or click to browse</p>
+            <div className="flex items-center justify-center mb-2">
+              <ImageIcon className="size-6 text-muted-foreground" aria-hidden="true" />
+            </div>
+            <p className="text-muted-foreground mb-2">Drag and drop your images here</p>
+            <p className="text-xs text-muted-foreground">or click to browse</p>
           </Card>
         </div>
 
         <div>
           <label className="block text-sm font-medium mb-2">Sample Properties (Optional)</label>
           <Card className="border-2 border-dashed border-border p-8 text-center cursor-pointer hover:border-primary transition">
-            <div className="text-4xl mb-2">📋</div>
-            <p className="text-muted mb-2">Upload CSV or JSON with property data</p>
-            <p className="text-xs text-muted">or click to browse</p>
+            <div className="flex items-center justify-center mb-2">
+              <FileTextIcon className="size-6 text-muted-foreground" aria-hidden="true" />
+            </div>
+            <p className="text-muted-foreground mb-2">Upload CSV or JSON with property data</p>
+            <p className="text-xs text-muted-foreground">or click to browse</p>
           </Card>
         </div>
       </div>
 
-      <div className="flex gap-4 mt-8">
+      <div className="flex flex-col sm:flex-row gap-4 mt-8">
         <Button variant="outline" onClick={onBack} className="flex-1 border-border hover:bg-surface bg-transparent">
           Back
         </Button>
         <Button onClick={onNext} className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground">
+          <UploadCloudIcon className="size-4 mr-2" aria-hidden="true" />
           Next
         </Button>
       </div>

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { Building2Icon } from "lucide-react";
 import { StepIndicator } from "@/components/onboarding/step-indicator";
 import { WebsiteTypeSelector } from "@/components/onboarding/website-type-selector";
 import { TemplateGallery } from "@/components/onboarding/template-gallery";
@@ -46,7 +47,10 @@ export default function OnboardingPage() {
     <div className="min-h-screen bg-background">
       <nav className="border-b border-border bg-surface">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-          <div className="text-2xl font-bold text-gradient">Real Estate</div>
+          <div className="flex items-center gap-3">
+            <Building2Icon className="size-6 text-primary" aria-hidden="true" />
+            <div className="text-2xl font-bold text-gradient">Real Estate</div>
+          </div>
           <ThemeToggle />
         </div>
       </nav>
@@ -54,7 +58,7 @@ export default function OnboardingPage() {
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-12">
           <h1 className="text-4xl font-bold tracking-tight mb-2">Create Your Website</h1>
-          <p className="text-muted text-lg">
+          <p className="text-muted-foreground text-lg">
             Follow these steps to build a professional real estate website
           </p>
         </div>

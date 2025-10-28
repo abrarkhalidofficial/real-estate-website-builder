@@ -1,6 +1,7 @@
 "use client"
 
 import { Card } from "@/components/ui/card"
+import { Building2Icon, BuildingIcon, HammerIcon, HomeIcon } from "lucide-react"
 
 interface WebsiteTypeSelectorProps {
   selected: string
@@ -12,25 +13,25 @@ const websiteTypes = [
     id: "agency",
     title: "Real Estate Agency",
     description: "Showcase your agency and list properties",
-    icon: "🏢",
+    icon: Building2Icon,
   },
   {
     id: "developer",
     title: "Property Developer",
     description: "Highlight development projects and properties",
-    icon: "🏗️",
+    icon: HammerIcon,
   },
   {
     id: "villa",
     title: "Villa Listing",
     description: "Feature luxury villas and properties",
-    icon: "🏰",
+    icon: HomeIcon,
   },
   {
     id: "commercial",
     title: "Commercial Real Estate",
     description: "Showcase commercial properties and spaces",
-    icon: "🏢",
+    icon: BuildingIcon,
   },
 ]
 
@@ -47,9 +48,11 @@ export function WebsiteTypeSelector({ selected, onSelect }: WebsiteTypeSelectorP
               selected === type.id ? "border-primary bg-primary/10" : "border-border hover:border-primary/50"
             }`}
           >
-            <div className="text-4xl mb-3">{type.icon}</div>
+            <div className="mb-3">
+              <type.icon className="size-6 text-primary" aria-hidden="true" />
+            </div>
             <h3 className="text-lg font-semibold mb-2">{type.title}</h3>
-            <p className="text-muted text-sm">{type.description}</p>
+            <p className="text-muted-foreground text-sm">{type.description}</p>
           </Card>
         ))}
       </div>

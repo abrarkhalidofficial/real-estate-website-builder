@@ -1,6 +1,8 @@
 "use client"
 
 import { Card } from "@/components/ui/card"
+import { AspectRatio } from "@/components/ui/aspect-ratio"
+import { CheckIcon } from "lucide-react"
 
 interface TemplateGalleryProps {
   selected: string
@@ -43,19 +45,26 @@ export function TemplateGallery({ selected, onSelect }: TemplateGalleryProps) {
           <Card
             key={template.id}
             onClick={() => onSelect(template.id)}
-            className={`overflow-hidden cursor-pointer transition-all border-2 ${
-              selected === template.id ? "border-primary" : "border-border hover:border-primary/50"
+            className={`overflow-hidden cursor-pointer transition-all border-2 relative ${
+              selected === template.id ? "border-primary ring-1 ring-primary/30" : "border-border hover:border-primary/50"
             }`}
           >
-            <img
-              src={template.preview || "/placeholder.svg"}
-              alt={template.name}
-              className="w-full h-40 object-cover"
-            />
+            <AspectRatio ratio={16 / 9}>
+              <img
+                src={template.preview || "/placeholder.svg"}
+                alt={template.name}
+                className="w-full h-full object-cover"
+              />
+            </AspectRatio>
             <div className="p-4">
               <h3 className="font-semibold mb-1">{template.name}</h3>
-              <p className="text-sm text-muted">{template.description}</p>
+              <p className="text-sm text-muted-foreground">{template.description}</p>
             </div>
+            {selected === template.id && (
+              <div className="absolute top-3 right-3 bg-primary text-primary-foreground rounded-full p-1">
+                <CheckIcon className="size-4" aria-hidden="true" />
+              </div>
+            )}
           </Card>
         ))}
       </div>

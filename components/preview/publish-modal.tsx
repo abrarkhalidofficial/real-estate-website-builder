@@ -25,7 +25,7 @@ export function PublishModal({ onClose, onPublish }: PublishModalProps) {
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-      <Card className="bg-surface border-border p-8 max-w-md w-full mx-4">
+      <Card className="p-8 max-w-md w-full mx-4 bg-secondary text-secondary-foreground">
         <h2 className="text-2xl font-bold mb-6">Publish Your Website</h2>
 
         <div className="space-y-6">
