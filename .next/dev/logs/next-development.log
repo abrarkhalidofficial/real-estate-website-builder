@@ -1,21 +1,25 @@
-[03:03:18.576] Server  ERROR   Error: ENOENT: no such file or directory, scandir 'C:\Users\Abrar\Documents\Projects\real-estate-website-builder\app'
-[03:03:19.214] Server  ERROR    ⨯ "unhandledRejection:" Error: ENOENT: no such file or directory, scandir 'C:\Users\Abrar\Documents\Projects\real-estate-website-builder\app'
-[03:03:19.887] Server  ERROR    ⨯ "unhandledRejection: " Error: ENOENT: no such file or directory, scandir 'C:\Users\Abrar\Documents\Projects\real-estate-website-builder\app'
-[03:03:28.390] Server  ERROR   Error: ENOENT: no such file or directory, scandir 'C:\Users\Abrar\Documents\Projects\real-estate-website-builder\app'
-[03:03:28.462] Server  ERROR   Error: ENOENT: no such file or directory, scandir 'C:\Users\Abrar\Documents\Projects\real-estate-website-builder\app'
-[03:03:29.411] Server  ERROR   Error: ENOENT: no such file or directory, scandir 'C:\Users\Abrar\Documents\Projects\real-estate-website-builder\app'
-[03:03:29.869] Server  ERROR   Error: ENOENT: no such file or directory, scandir 'C:\Users\Abrar\Documents\Projects\real-estate-website-builder\app'
-[03:03:29.977] Server  ERROR   Error: ENOENT: no such file or directory, scandir 'C:\Users\Abrar\Documents\Projects\real-estate-website-builder\app'
-[03:03:30.067] Server  ERROR   Error: ENOENT: no such file or directory, scandir 'C:\Users\Abrar\Documents\Projects\real-estate-website-builder\app'
-[03:03:30.200] Server  ERROR   Error: ENOENT: no such file or directory, scandir 'C:\Users\Abrar\Documents\Projects\real-estate-website-builder\app'
-[03:03:30.761] Server  ERROR   Error: ENOENT: no such file or directory, scandir 'C:\Users\Abrar\Documents\Projects\real-estate-website-builder\app'
-[03:03:30.913] Server  ERROR   Error: ENOENT: no such file or directory, scandir 'C:\Users\Abrar\Documents\Projects\real-estate-website-builder\app'
-[03:03:31.372] Server  ERROR   Error: ENOENT: no such file or directory, scandir 'C:\Users\Abrar\Documents\Projects\real-estate-website-builder\app'
-[03:03:31.515] Server  ERROR   Error: ENOENT: no such file or directory, scandir 'C:\Users\Abrar\Documents\Projects\real-estate-website-builder\app'
-[03:03:31.607] Server  ERROR   Error: ENOENT: no such file or directory, scandir 'C:\Users\Abrar\Documents\Projects\real-estate-website-builder\app'
-[03:03:32.017] Server  ERROR   Error: ENOENT: no such file or directory, scandir 'C:\Users\Abrar\Documents\Projects\real-estate-website-builder\app'
-[03:03:32.439] Server  ERROR   Error: ENOENT: no such file or directory, scandir 'C:\Users\Abrar\Documents\Projects\real-estate-website-builder\app'
-[03:03:32.929] Server  ERROR   Error: ENOENT: no such file or directory, scandir 'C:\Users\Abrar\Documents\Projects\real-estate-website-builder\app'
-[03:03:33.021] Server  ERROR   Error: ENOENT: no such file or directory, scandir 'C:\Users\Abrar\Documents\Projects\real-estate-website-builder\app'
-[03:03:33.203] Server  ERROR   Error: ENOENT: no such file or directory, scandir 'C:\Users\Abrar\Documents\Projects\real-estate-website-builder\app'
-[03:03:33.250] Server  ERROR   Error: ENOENT: no such file or directory, scandir 'C:\Users\Abrar\Documents\Projects\real-estate-website-builder\app'
+[00:00:05.267] Server  LOG     
+[00:00:05.336] Server  LOG        We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+[00:00:05.353] Server  LOG        The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+[00:00:05.383] Server  LOG        	- include was updated to add '.next\dev/types/**/*.ts'
+[00:00:05.388] Server  LOG        	- include was updated to add '.next\dev/types/**/*.ts'
+[00:00:05.397] Server  LOG     
+[00:00:06.676] Server  LOG      ✓ Ready in 5.2s
+[00:00:14.373] Server  LOG      ○ Compiling / ...
+[00:00:22.379] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:22.651] Browser WARN    Image with src "http://localhost:3000/vercel.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:01:43.483] Server  LOG      ✓ Compiled in 2.7s
+[00:01:44.073] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:44.336] Browser WARN    Image with src "http://localhost:3000/vercel.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:01:48.545] Server  LOG      ✓ Compiled in 478ms
+[00:01:56.429] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:56.648] Browser WARN    Image with src "http://localhost:3000/vercel.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:02:44.566] Server  LOG      ✓ Compiled in 1363ms
+[00:03:10.408] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:10.804] Browser WARN    Image with src "http://localhost:3000/vercel.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:04:22.495] Server  LOG      ✓ Compiled in 675ms
+[00:05:42.239] Server  LOG      ✓ Compiled in 161ms
+[00:05:42.849] Server  LOG      ✓ Compiled in 261ms
+[00:06:51.795] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:52.067] Browser WARN    Image with src "http://localhost:3000/vercel.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.

@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  /* New brand palette inspired by provided scheme */
+  --background: #0B0B10;      /* Deep charcoal */
+  --foreground: #F1F3F5;      /* Soft light */
+  --primary: #FF8A3A;         /* Mango orange */
+  --accent: #B62FFF;          /* Vibrant magenta */
+  --muted: #A6B0C0;           /* Neutral slate */
+  --surface: #161821;         /* Card surface */
+  --brand-gradient: linear-gradient(135deg, #FF8A3A 0%, #B62FFF 100%);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-urbanist);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0B0B10;
+    --foreground: #F1F3F5;
+    --primary: #FF8A3A;
+    --accent: #B62FFF;
+    --muted: #A6B0C0;
+    --surface: #161821;
+    --brand-gradient: linear-gradient(135deg, #FF8A3A 0%, #B62FFF 100%);
+  }
+}
+
+/* Explicit dark class support for user-controlled theme toggle */
+.dark {
+  --background: #0B0B10;
+  --foreground: #F1F3F5;
+  --primary: #FF8A3A;
+  --accent: #B62FFF;
+  --muted: #A6B0C0;
+  --surface: #161821;
+  --brand-gradient: linear-gradient(135deg, #FF8A3A 0%, #B62FFF 100%);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Utility class to apply the brand gradient */
+.bg-brand-gradient {
+  background-image: var(--brand-gradient);
+}
+
+/* Optional card surface */
+.bg-surface {
+  background-color: var(--surface);
+}
