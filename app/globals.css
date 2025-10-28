@@ -4,40 +4,40 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated to custom real estate brand colors */
-  --background: #0b0b10;
-  --foreground: #f1f3f5;
+  /* Light theme: professional bright UI */
+  --background: #ffffff;
+  --foreground: #0b0b10;
   --primary: #ff8a3a;
   --accent: #b62fff;
-  --muted: #a6b0c0;
-  --surface: #161821;
-  --card: #161821;
-  --card-foreground: #f1f3f5;
-  --popover: #161821;
-  --popover-foreground: #f1f3f5;
-  --primary-foreground: #0b0b10;
-  --secondary: #2a2d3a;
-  --secondary-foreground: #f1f3f5;
-  --muted-foreground: #a6b0c0;
-  --accent-foreground: #f1f3f5;
-  --destructive: #ff4444;
-  --destructive-foreground: #f1f3f5;
-  --border: #2a2d3a;
-  --input: #1f2230;
+  --muted: #64748b;
+  --surface: #f8fafc;
+  --card: #ffffff;
+  --card-foreground: #0b0b10;
+  --popover: #ffffff;
+  --popover-foreground: #0b0b10;
+  --primary-foreground: #ffffff;
+  --secondary: #f1f5f9;
+  --secondary-foreground: #0b0b10;
+  --muted-foreground: #64748b;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #e2e8f0;
+  --input: #f1f5f9;
   --ring: #ff8a3a;
   --chart-1: #ff8a3a;
   --chart-2: #b62fff;
-  --chart-3: #a6b0c0;
+  --chart-3: #64748b;
   --chart-4: #ff6b35;
   --chart-5: #9d4edd;
   --radius: 0.625rem;
-  --sidebar: #161821;
-  --sidebar-foreground: #f1f3f5;
+  --sidebar: #f9fafb;
+  --sidebar-foreground: #0b0b10;
   --sidebar-primary: #ff8a3a;
-  --sidebar-primary-foreground: #0b0b10;
+  --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #b62fff;
-  --sidebar-accent-foreground: #f1f3f5;
-  --sidebar-border: #2a2d3a;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #e2e8f0;
   --sidebar-ring: #ff8a3a;
 }
 

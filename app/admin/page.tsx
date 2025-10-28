@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { AdminSidebar } from "@/components/admin/sidebar";
 import { UsersTable } from "@/components/admin/users-table";
 import { WebsitesTable } from "@/components/admin/websites-table";
@@ -20,9 +21,12 @@ export default function AdminPage() {
       <main className="flex-1 overflow-y-auto">
         <header className="border-b border-border bg-surface sticky top-0 z-40">
           <div className="px-8 py-6 flex justify-between items-center">
-            <div>
-              <h1 className="text-3xl font-bold">Admin Dashboard</h1>
-              <p className="text-muted">Manage your platform</p>
+            <div className="flex items-center gap-4">
+              <div>
+                <h1 className="text-3xl font-bold">Admin Dashboard</h1>
+                <p className="text-muted">Manage your platform</p>
+              </div>
+              <ThemeToggle />
             </div>
             <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
               Export Data

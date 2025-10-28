@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Home() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -13,7 +14,10 @@ export default function Home() {
       <div className="min-h-screen bg-background">
         <nav className="border-b border-border bg-surface">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <div className="text-2xl font-bold text-gradient">Real Estate</div>
+            <div className="flex items-center gap-3">
+              <div className="text-2xl font-bold text-gradient">Real Estate</div>
+              <ThemeToggle />
+            </div>
             <button
               onClick={() => setIsLoggedIn(false)}
               className="text-muted hover:text-foreground transition"
@@ -37,33 +41,39 @@ export default function Home() {
               <p className="text-muted mb-4">
                 Start building your real estate website with our templates
               </p>
-              <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                Get Started
-              </Button>
+              <Link href="/onboarding">
+                <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                  Get Started
+                </Button>
+              </Link>
             </Card>
             <Card className="bg-surface border-border p-6 hover:border-primary transition">
               <h3 className="text-xl font-semibold mb-2">My Websites</h3>
               <p className="text-muted mb-4">
                 Manage and edit your existing websites
               </p>
-              <Button
-                variant="outline"
-                className="w-full border-border hover:bg-surface bg-transparent"
-              >
-                View All
-              </Button>
+              <Link href="/dashboard">
+                <Button
+                  variant="outline"
+                  className="w-full border-border hover:bg-surface bg-transparent"
+                >
+                  View All
+                </Button>
+              </Link>
             </Card>
             <Card className="bg-surface border-border p-6 hover:border-primary transition">
               <h3 className="text-xl font-semibold mb-2">Analytics</h3>
               <p className="text-muted mb-4">
                 Track performance and visitor insights
               </p>
-              <Button
-                variant="outline"
-                className="w-full border-border hover:bg-surface bg-transparent"
-              >
-                View Stats
-              </Button>
+              <Link href="/admin">
+                <Button
+                  variant="outline"
+                  className="w-full border-border hover:bg-surface bg-transparent"
+                >
+                  View Stats
+                </Button>
+              </Link>
             </Card>
           </div>
         </main>
@@ -75,7 +85,10 @@ export default function Home() {
     <div className="min-h-screen bg-background flex flex-col">
       <nav className="border-b border-border bg-surface">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold text-gradient">Real Estate </div>
+          <div className="flex items-center gap-3">
+            <div className="text-2xl font-bold text-gradient">Real Estate</div>
+            <ThemeToggle />
+          </div>
           <div className="flex gap-4">
             <Link href="/login">
               <Button

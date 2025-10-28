@@ -3,15 +3,18 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { StepIndicator } from "@/components/onboarding/step-indicator";
 import { WebsiteTypeSelector } from "@/components/onboarding/website-type-selector";
 import { TemplateGallery } from "@/components/onboarding/template-gallery";
 import { PageSelector } from "@/components/onboarding/page-selector";
 import { ContentUpload } from "@/components/onboarding/content-upload";
+import { useRouter } from "next/navigation";
 
 type Step = "type" | "template" | "pages" | "content" | "review";
 
 export default function OnboardingPage() {
+  const router = useRouter();
   const [currentStep, setCurrentStep] = useState<Step>("type");
   const [websiteType, setWebsiteType] = useState<string>("");
   const [selectedTemplate, setSelectedTemplate] = useState<string>("");
@@ -42,22 +45,23 @@ export default function OnboardingPage() {
   return (
     <div className="min-h-screen bg-background">
       <nav className="border-b border-border bg-surface">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="text-2xl font-bold text-gradient">Real Estate </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+          <div className="text-2xl font-bold text-gradient">Real Estate</div>
+          <ThemeToggle />
         </div>
       </nav>
 
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-12">
-          <h1 className="text-4xl font-bold mb-2">Create Your Website</h1>
-          <p className="text-muted">
-            Follow these steps to build your professional real estate website
+          <h1 className="text-4xl font-bold tracking-tight mb-2">Create Your Website</h1>
+          <p className="text-muted text-lg">
+            Follow these steps to build a professional real estate website
           </p>
         </div>
 
         <StepIndicator steps={steps} currentStep={currentStep} />
 
-        <Card className="bg-surface border-border p-8 mt-8">
+        <Card className="bg-surface border-border p-8 mt-8 shadow-sm">
           {currentStep === "type" && (
             <WebsiteTypeSelector
               selected={websiteType}
@@ -120,7 +124,17 @@ export default function OnboardingPage() {
                 >
                   Back
                 </Button>
-                <Button className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground">
+                <Button
+                  className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground"
+                  onClick={() => {
+                    const siteId = selectedTemplate || "new";
+                    const params = new URLSearchParams({
+                      type: websiteType || "",
+                      pages: selectedPages.join(","),
+                    });
+                    router.push(`/preview/${encodeURIComponent(siteId)}?${params.toString()}`);
+                  }}
+                >
                   Create Website
                 </Button>
               </div>

@@ -4,6 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export default function DashboardPage() {
   const [websites, setWebsites] = useState([
@@ -38,9 +39,12 @@ export default function DashboardPage() {
       {/* Header */}
       <header className="border-b border-border bg-surface">
         <div className="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
-          <div>
-            <h1 className="text-3xl font-bold text-gradient">My Websites</h1>
-            <p className="text-muted">Manage and create your real estate websites</p>
+          <div className="flex items-center gap-4">
+            <div>
+              <h1 className="text-3xl font-bold text-gradient">My Websites</h1>
+              <p className="text-muted">Manage and create your real estate websites</p>
+            </div>
+            <ThemeToggle />
           </div>
           <Link href="/onboarding">
             <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">Create New Website</Button>
