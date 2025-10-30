@@ -121,7 +121,7 @@ export function BuilderSidebar({ pageData, onUpdate }: BuilderSidebarProps) {
             <button
               key={section.type}
               onClick={() => addSection(section.type)}
-              className="w-full flex items-center gap-2 px-3 py-2 rounded-lg bg-accent hover:bg-accent-light transition-colors text-white text-sm font-medium"
+              className="w-full flex items-center gap-2 px-3 py-2 rounded-lg bg-accent hover:opacity-90 transition-colors text-accent-foreground text-sm font-medium"
             >
               <Plus className="w-4 h-4" />
               Add {section.label}

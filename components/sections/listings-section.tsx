@@ -82,7 +82,7 @@ export function ListingsSection({ section, pageData, onUpdate }: ListingsSection
           </div>
           <button
             onClick={addProperty}
-            className="w-full flex items-center gap-2 px-4 py-2 bg-accent hover:bg-accent-light transition-colors text-white rounded-lg"
+            className="w-full flex items-center gap-2 px-4 py-2 bg-accent hover:opacity-90 transition-colors text-accent-foreground rounded-lg"
           >
             <Plus className="w-4 h-4" />
             Add Property
@@ -127,7 +127,7 @@ export function ListingsSection({ section, pageData, onUpdate }: ListingsSection
                   />
                   <button
                     onClick={() => setEditingPropertyId(null)}
-                    className="w-full px-3 py-1 bg-success hover:bg-green-600 text-white rounded text-sm"
+                    className="w-full px-3 py-1 bg-primary hover:opacity-90 text-primary-foreground rounded text-sm"
                   >
                     Done
                   </button>
@@ -136,13 +136,13 @@ export function ListingsSection({ section, pageData, onUpdate }: ListingsSection
                 <div className="flex gap-2 mt-4">
                   <button
                     onClick={() => setEditingPropertyId(property.id)}
-                    className="flex-1 px-3 py-1 bg-accent hover:bg-accent-light text-white rounded text-sm"
+                    className="flex-1 px-3 py-1 bg-accent hover:opacity-90 text-accent-foreground rounded text-sm"
                   >
                     Edit
                   </button>
                   <button
                     onClick={() => removeProperty(property.id)}
-                    className="px-3 py-1 bg-error hover:bg-red-600 text-white rounded text-sm"
+                    className="px-3 py-1 bg-destructive hover:opacity-90 text-destructive-foreground rounded text-sm"
                   >
                     <Trash2 className="w-4 h-4" />
                   </button>

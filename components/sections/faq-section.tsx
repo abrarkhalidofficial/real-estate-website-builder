@@ -54,7 +54,7 @@ export function FAQSection({ section, pageData, onUpdate }: FAQSectionProps) {
         <div className="mb-6 p-4 bg-neutral-100 dark:bg-neutral-700 rounded-lg">
           <button
             onClick={addItem}
-            className="w-full flex items-center gap-2 px-4 py-2 bg-accent hover:bg-accent-light transition-colors text-white rounded-lg"
+            className="w-full flex items-center gap-2 px-4 py-2 bg-accent hover:opacity-90 transition-colors text-accent-foreground rounded-lg"
           >
             <Plus className="w-4 h-4" />
             Add FAQ Item
@@ -92,7 +92,7 @@ export function FAQSection({ section, pageData, onUpdate }: FAQSectionProps) {
                   />
                   <button
                     onClick={() => removeItem(item.id)}
-                    className="w-full px-3 py-1 bg-error hover:bg-red-600 text-white rounded text-sm flex items-center gap-2 justify-center"
+                    className="w-full px-3 py-1 bg-destructive hover:opacity-90 text-destructive-foreground rounded text-sm flex items-center gap-2 justify-center"
                   >
                     <Trash2 className="w-4 h-4" />
                     Remove

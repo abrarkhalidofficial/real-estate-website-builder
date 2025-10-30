@@ -64,7 +64,7 @@ export default function BuilderPage() {
   }
 
   return (
-    <div className="flex flex-col h-screen bg-neutral-50 dark:bg-neutral-900">
+    <div className="flex flex-col h-screen bg-background">
       <BuilderHeader pageData={pageData} onSave={handleSave} />
       <div className="flex flex-1 overflow-hidden">
         <BuilderSidebar pageData={pageData} onUpdate={handleSave} />

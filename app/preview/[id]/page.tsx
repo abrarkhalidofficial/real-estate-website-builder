@@ -53,7 +53,7 @@ export default function PreviewPage() {
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-primary dark:text-neutral-50 mb-2">Project not found</h1>
-          <Link href="/" className="text-accent hover:text-accent-light">
+          <Link href="/" className="text-accent hover:opacity-80">
             Return to home
           </Link>
         </div>
@@ -62,12 +62,12 @@ export default function PreviewPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white dark:bg-neutral-900">
-      <div className="sticky top-0 z-50 bg-white dark:bg-neutral-800 border-b border-neutral-200 dark:border-neutral-700 px-6 py-4">
+    <div className="min-h-screen bg-background">
+      <div className="sticky top-0 z-50 bg-popover border-b border-border px-6 py-4">
         <div className="flex items-center justify-between">
           <Link
             href={`/builder?project=${id}`}
-            className="inline-flex items-center gap-2 text-accent hover:text-accent-light transition-colors"
+            className="inline-flex items-center gap-2 text-accent hover:opacity-80 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Editor
@@ -76,7 +76,7 @@ export default function PreviewPage() {
           <div className="flex items-center gap-3">
             <button
               onClick={handleShare}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-neutral-100 dark:bg-neutral-700 hover:bg-neutral-200 dark:hover:bg-neutral-600 transition-colors text-primary dark:text-neutral-50"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-secondary text-secondary-foreground hover:opacity-90 transition-colors"
             >
               <Share2 className="w-4 h-4" />
               Share
@@ -84,7 +84,7 @@ export default function PreviewPage() {
 
             <button
               onClick={() => setShowExportModal(true)}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-accent hover:bg-accent-light transition-colors text-white"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-accent hover:opacity-90 transition-colors text-accent-foreground"
             >
               <Download className="w-4 h-4" />
               Export

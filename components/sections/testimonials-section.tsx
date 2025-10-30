@@ -56,7 +56,7 @@ export function TestimonialsSection({ section, pageData, onUpdate }: Testimonial
         <div className="mb-6 p-4 bg-white dark:bg-neutral-800 rounded-lg">
           <button
             onClick={addTestimonial}
-            className="w-full flex items-center gap-2 px-4 py-2 bg-accent hover:bg-accent-light transition-colors text-white rounded-lg"
+            className="w-full flex items-center gap-2 px-4 py-2 bg-accent hover:opacity-90 transition-colors text-accent-foreground rounded-lg"
           >
             <Plus className="w-4 h-4" />
             Add Testimonial
@@ -102,7 +102,7 @@ export function TestimonialsSection({ section, pageData, onUpdate }: Testimonial
                 />
                 <button
                   onClick={() => setEditingId(null)}
-                  className="w-full px-3 py-1 bg-success hover:bg-green-600 text-white rounded text-sm"
+                  className="w-full px-3 py-1 bg-primary hover:opacity-90 text-primary-foreground rounded text-sm"
                 >
                   Done
                 </button>
@@ -111,13 +111,13 @@ export function TestimonialsSection({ section, pageData, onUpdate }: Testimonial
               <div className="flex gap-2 mt-4">
                 <button
                   onClick={() => setEditingId(testimonial.id)}
-                  className="flex-1 px-3 py-1 bg-accent hover:bg-accent-light text-white rounded text-sm"
+                  className="flex-1 px-3 py-1 bg-accent hover:opacity-90 text-accent-foreground rounded text-sm"
                 >
                   Edit
                 </button>
                 <button
                   onClick={() => removeTestimonial(testimonial.id)}
-                  className="px-3 py-1 bg-error hover:bg-red-600 text-white rounded text-sm"
+                  className="px-3 py-1 bg-destructive hover:opacity-90 text-destructive-foreground rounded text-sm"
                 >
                   <Trash2 className="w-4 h-4" />
                 </button>

@@ -8,7 +8,7 @@ export function PortalBlock({
   subtitle?: string
 }) {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary text-white">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary text-primary-foreground">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-4">{title}</h2>
         <p className="text-lg text-neutral-200 mb-8">{subtitle}</p>
@@ -16,16 +16,16 @@ export function PortalBlock({
           <input
             type="email"
             placeholder="Your email"
-            className="w-full px-4 py-3 rounded-lg bg-white text-primary focus:outline-none focus:ring-2 focus:ring-accent"
+            className="w-full px-4 py-3 rounded-lg bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-ring border border-border"
           />
           <textarea
             placeholder="Your message"
             rows={4}
-            className="w-full px-4 py-3 rounded-lg bg-white text-primary focus:outline-none focus:ring-2 focus:ring-accent"
+            className="w-full px-4 py-3 rounded-lg bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-ring border border-border"
           />
           <button
             type="submit"
-            className="w-full px-6 py-3 bg-accent hover:bg-accent-light text-white rounded-lg font-semibold transition-colors"
+            className="w-full px-6 py-3 bg-accent hover:opacity-90 text-accent-foreground rounded-lg font-semibold transition-colors"
           >
             Send Message
           </button>

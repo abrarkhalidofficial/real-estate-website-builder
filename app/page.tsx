@@ -8,30 +8,30 @@ export default function Home() {
   const templates = Object.values(TEMPLATES)
 
   return (
-    <div className="min-h-screen bg-neutral-50 dark:bg-neutral-900 transition-colors duration-300">
+    <div className="min-h-screen bg-background transition-colors duration-300">
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/80 dark:bg-neutral-800/80 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-700 transition-colors duration-300">
+      <nav className="sticky top-0 z-50 bg-popover/80 backdrop-blur-md border-b border-border transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2 animate-slide-in-left">
             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center hover:shadow-lg transition-all duration-200">
-              <span className="text-white font-bold">RE</span>
+              <span className="text-primary-foreground font-bold">RE</span>
             </div>
-            <span className="font-bold text-lg text-primary dark:text-neutral-50">Real Estate Builder</span>
+            <span className="font-bold text-lg text-primary">Real Estate Builder</span>
           </div>
           <ThemeToggle />
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary to-primary-light text-white animate-fade-in">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 animated-gradient text-foreground animate-fade-in">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl sm:text-6xl font-bold mb-6 text-balance">Create Your Real Estate Website Easily</h1>
-          <p className="text-xl text-neutral-200 mb-8 text-balance">
+          <p className="text-xl text-muted-foreground mb-8 text-balance">
             Choose a template, customize with our visual editor, and export your site in minutes
           </p>
           <a
             href="#templates"
-            className="inline-flex items-center gap-2 bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-neutral-100 transition-all duration-200 hover:shadow-lg hover:scale-105 active:scale-95"
+            className="inline-flex items-center gap-2 bg-card text-foreground px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-all duration-200 hover:shadow-lg hover:scale-105 active:scale-95"
           >
             Get Started <ArrowRight className="w-5 h-5" />
           </a>
@@ -42,8 +42,8 @@ export default function Home() {
       <section id="templates" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl font-bold text-primary dark:text-neutral-50 mb-4">Choose Your Template</h2>
-            <p className="text-lg text-neutral-600 dark:text-neutral-400">
+            <h2 className="text-4xl font-bold text-primary mb-4">Choose Your Template</h2>
+            <p className="text-lg text-muted-foreground">
               Select from our professionally designed templates
             </p>
           </div>
@@ -55,17 +55,17 @@ export default function Home() {
                 className="card p-6 flex flex-col hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in"
                 style={{ animationDelay: `${idx * 100}ms` }}
               >
-                <div className="w-full h-48 bg-gradient-to-br from-neutral-200 to-neutral-300 dark:from-neutral-700 dark:to-neutral-600 rounded-lg mb-4 flex items-center justify-center hover:shadow-md transition-all duration-200">
+                <div className="w-full h-48 bg-muted rounded-lg mb-4 flex items-center justify-center hover:shadow-md transition-all duration-200">
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-neutral-400 dark:text-neutral-500 mb-2">
+                    <div className="text-4xl font-bold text-muted-foreground mb-2">
                       {template.name.split(" ")[0][0]}
                     </div>
-                    <p className="text-sm text-neutral-500 dark:text-neutral-400">Template Preview</p>
+                    <p className="text-sm text-muted-foreground">Template Preview</p>
                   </div>
                 </div>
 
-                <h3 className="text-2xl font-bold text-primary dark:text-neutral-50 mb-2">{template.name}</h3>
-                <p className="text-neutral-600 dark:text-neutral-400 mb-6 flex-grow">
+                <h3 className="text-2xl font-bold text-primary mb-2">{template.name}</h3>
+                <p className="text-muted-foreground mb-6 flex-grow">
                   {template.seo?.description || "Professional template for your real estate business"}
                 </p>
 
@@ -82,9 +82,9 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-100 dark:bg-neutral-800 transition-colors duration-300">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted transition-colors duration-300">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-primary dark:text-neutral-50 mb-16 animate-fade-in">
+          <h2 className="text-4xl font-bold text-center text-primary mb-16 animate-fade-in">
             Powerful Features
           </h2>
 
@@ -120,21 +120,21 @@ export default function Home() {
             ].map((feature, idx) => (
               <div
                 key={idx}
-                className="text-center p-6 rounded-lg bg-white dark:bg-neutral-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-fade-in"
+                className="text-center p-6 rounded-lg bg-card transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-fade-in"
                 style={{ animationDelay: `${idx * 100}ms` }}
               >
                 {feature.icon && (
                   <div className="w-12 h-12 bg-accent rounded-lg mx-auto mb-4 flex items-center justify-center hover:shadow-lg transition-all duration-200">
-                    <feature.icon className="w-6 h-6 text-white" />
+                    <feature.icon className="w-6 h-6 text-accent-foreground" />
                   </div>
                 )}
                 {!feature.icon && (
                   <div className="w-12 h-12 bg-accent rounded-lg mx-auto mb-4 flex items-center justify-center hover:shadow-lg transition-all duration-200">
-                    <span className="text-white font-bold">{idx + 1}</span>
+                    <span className="text-accent-foreground font-bold">{idx + 1}</span>
                   </div>
                 )}
-                <h3 className="text-xl font-bold text-primary dark:text-neutral-50 mb-2">{feature.title}</h3>
-                <p className="text-neutral-600 dark:text-neutral-400">{feature.description}</p>
+                <h3 className="text-xl font-bold text-primary mb-2">{feature.title}</h3>
+                <p className="text-muted-foreground">{feature.description}</p>
               </div>
             ))}
           </div>

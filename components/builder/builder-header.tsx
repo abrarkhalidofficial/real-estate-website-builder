@@ -47,7 +47,7 @@ export function BuilderHeader({ pageData, onSave }: BuilderHeaderProps) {
 
             <button
               onClick={() => setShowExportModal(true)}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-accent hover:bg-accent-light transition-colors text-white"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-accent hover:opacity-90 transition-colors text-accent-foreground"
             >
               <Download className="w-4 h-4" />
               Export
@@ -55,7 +55,7 @@ export function BuilderHeader({ pageData, onSave }: BuilderHeaderProps) {
 
             <button
               onClick={() => onSave(pageData)}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-success hover:bg-green-600 transition-colors text-white"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary hover:opacity-90 transition-colors text-primary-foreground"
             >
               <Save className="w-4 h-4" />
               Save
