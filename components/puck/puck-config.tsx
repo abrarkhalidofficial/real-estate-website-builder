@@ -63,11 +63,46 @@ export const puckConfig: Config = {
             { label: "Masonry", value: "masonry" },
           ],
         },
+        properties: {
+          type: "array",
+          label: "Properties",
+          arrayFields: {
+            id: { type: "text", label: "ID" },
+            title: { type: "text", label: "Title" },
+            description: { type: "textarea", label: "Description" },
+            price: { type: "number", label: "Price" },
+            location: { type: "text", label: "Location" },
+            bedrooms: { type: "number", label: "Bedrooms" },
+            bathrooms: { type: "number", label: "Bathrooms" },
+            areaSqFt: { type: "number", label: "Area (sqft)" },
+            images: {
+              type: "array",
+              label: "Images",
+              arrayFields: { url: { type: "text", label: "Image URL" } },
+            } as any,
+            features: {
+              type: "array",
+              label: "Features",
+              arrayFields: { value: { type: "text", label: "Feature" } },
+            } as any,
+            status: {
+              type: "select",
+              label: "Status",
+              options: [
+                { label: "For Sale", value: "for-sale" },
+                { label: "For Rent", value: "for-rent" },
+                { label: "Sold", value: "sold" },
+              ],
+            },
+            contactEmail: { type: "text", label: "Contact Email" },
+          },
+        } as any,
       },
       render: (props) => <ListingsBlock {...props} />,
       defaultProps: {
         title: "Featured Properties",
         layout: "grid",
+        properties: [],
       },
     },
     About: {
@@ -100,10 +135,20 @@ export const puckConfig: Config = {
           type: "text",
           label: "Section Title",
         },
+        items: {
+          type: "array",
+          label: "FAQ Items",
+          arrayFields: {
+            id: { type: "text", label: "ID" },
+            question: { type: "text", label: "Question" },
+            answer: { type: "textarea", label: "Answer" },
+          },
+        },
       },
       render: (props) => <FAQBlock {...props} />,
       defaultProps: {
         title: "Frequently Asked Questions",
+        items: [],
       },
     },
     Testimonials: {
@@ -113,10 +158,22 @@ export const puckConfig: Config = {
           type: "text",
           label: "Section Title",
         },
+        items: {
+          type: "array",
+          label: "Testimonials",
+          arrayFields: {
+            id: { type: "text", label: "ID" },
+            name: { type: "text", label: "Name" },
+            role: { type: "text", label: "Role" },
+            content: { type: "textarea", label: "Content" },
+            image: { type: "text", label: "Avatar URL" },
+          },
+        },
       },
       render: (props) => <TestimonialsBlock {...props} />,
       defaultProps: {
         title: "What Our Clients Say",
+        items: [],
       },
     },
     Portal: {
