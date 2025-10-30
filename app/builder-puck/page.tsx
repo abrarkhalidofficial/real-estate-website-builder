@@ -2,8 +2,8 @@
 
 import { useSearchParams } from "next/navigation"
 import { useEffect, useState } from "react"
-import { Puck } from "@puckeditor/puck"
-import "@puckeditor/puck/puck.css"
+import { Puck } from "@measured/puck"
+import "@measured/puck/puck.css"
 import { TEMPLATES } from "@/lib/templates"
 import type { PageData } from "@/lib/schemas"
 import { getProject } from "@/lib/storage"

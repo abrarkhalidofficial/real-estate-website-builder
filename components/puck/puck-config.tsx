@@ -1,6 +1,6 @@
 "use client"
 
-import type { Config } from "@puckeditor/puck"
+import type { Config } from "@measured/puck"
 import { HeroBlock } from "./blocks/hero-block"
 import { ListingsBlock } from "./blocks/listings-block"
 import { AboutBlock } from "./blocks/about-block"
