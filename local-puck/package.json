@@ -1,0 +1,12 @@
+{
+  "name": "@puckeditor/puck",
+  "version": "0.0.0-local",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "puck.css",
+    "index.d.ts"
+  ],
+  "license": "MIT"
+}

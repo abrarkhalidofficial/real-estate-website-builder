@@ -1,0 +1,6 @@
+/* Minimal placeholder styles for the local puck shim */
+.puck-editor-mock {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial;
+  color: #111;
+}
